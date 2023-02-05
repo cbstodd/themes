@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faustina&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+:root {
+  /* Fonts */
+  --serif: Faustina, Merriweather, 'IBM Plex Serif', 'Source Serif Pro', serif;
+  --condensed: 'Roboto Condensed', 'Merriweather Sans', 'Fira Sans Extra Condensed', Oswald, sans-serif;
+  --monospace: 'Jetbrains Mono Medium', 'SFMono Powerline', 'SF Mono Medium', 'IBM Plex Mono Medium', 'Roboto Mono', Menlo, 'DejaVu Sans Mono', monospace;
+  /* Colors ['sepia'] */
+  --sepia: #f4ecd8 !important;
+  --armyBrown: #b7b1a2 !important;
+  --darkBrown: #42372c !important;
+  --highlight: #fbcf7a !important;
+  --brownVisited: #946c49 !important;
+  --nord-light-text: #222535;
+  --nord-dark-bg: #2e3141;
+  --nord-dark-text: #afb7c9;
+  /* Colors ['nord'] */
+  --nord-light-bg: #afb7c9;
+  --dark-blue: #191b24;
+  --code-blue: #222535;
+  --main-blue: #2e3141;
+  --bright-shadow: #33374b;
+  --border-blue: #43475a;
+  --highlight-blue: #454961;
+}
+
+body[data-mode='sepia'] {
+  color: var(--darkBrown);
+  background-color: var(--sepia);
+  font-family: var(--serif);
+  font-weight: 700;
+}
+
+body[data-mode='nord-light'] {
+  color: var(--nord-light-text);
+  background-color: var(--nord-light-bg);
+  font-family: var(--serif);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-family: var(--condensed);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3rem;
+  letter-spacing: -0.21px;
+}
+
+p,
+li {
+  line-height: 2rem;
+}
+
+mark {
+  background-color: var(--highlight);
+}
+
+pre {
+  font-family: var(--monospace);
+  font-weight: 700;
+  background-color: var(--armyBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 7px;
+  color: #ffffe7;
+  padding: 1em 1.2em;
+  font-size: 1rem;
+}
+
+p > code,
+li > code {
+  font-family: var(--monospace);
+  font-weight: 700;
+  background-color: #5f5a4f;
+  border: 2px solid var(--darkBrown);
+  border-radius: 7px;
+  color: #ffffe7;
+  padding: 7px 10px;
+  font-size: 1rem;
+}
+
+a, a:link,
+li > a,
+li > a:link,
+a#reader-domain {
+  font-weight: 700;
+  font-family: var(--condensed);
+  color: var(--darkBrown);
+  border-bottom: 2px solid var(--darkBrown);
+}
+
+a:link:hover,
+li > a:hover,
+li > a:link:hover,
+a#reader-domain:hover {
+  font-weight: 700;
+  font-family: var(--condensed);
+  color: #f4ecd8;
+  background-color: var(--darkBrown);
+}
+a:link:visited,
+a:link:hover:visited,
+a:hover:visited,
+li > a:visited,
+li > a:link:visited,
+a#reader-domain:visited {
+  font-weight: 700;
+  font-family: var(--condensed);
+  color: var(--sepia);
+  background-color: var(--darkBrown);
+}
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid var(--armyBrown);
+  border-bottom: 1px solid #fffdef;
+}
+
+p,
+li {
+  line-height: 2.2em;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+body[data-mode='light'] {
+  color: #646262 !important;
+  font-family: var(--serif);
+}
+
+body[data-mode='dark'] {
+  color: rgb(158, 158, 160) !important;
+  font-family: var(--serif);
+  font-weight: 700;
+}
+
+blockquote {
+  font-family: var(--sans-serif);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.2rem 2rem;
+  margin: 0.5rem;
+  background-color: var(--armyBrown);
+  border-right: 2px solid var(--darkBrown);
+  border-left: 2px solid var(--darkBrown);
+}
